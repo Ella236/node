@@ -1,0 +1,12 @@
+{
+  "name": "github-profile-fetcher",
+  "version": "1.0.0",
+  "description": "A simple GitHub profile fetcher",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+} 
