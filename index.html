@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Profile Fetcher</title>
+    <title>GitHub Profile Finder | Elegant Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>GitHub Profile Fetcher</h1>
+        <h1>GitHub Profile Finder</h1>
         <div class="search-container">
             <input type="text" id="username" placeholder="Enter GitHub username">
-            <button onclick="fetchProfile()">Search</button>
+            <button onclick="fetchProfile()"><i class="fas fa-search"></i> Search</button>
         </div>
-        <div id="loading" class="hidden">Loading...</div>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <span>Retrieving profile information...</span>
+        </div>
         <div id="error" class="hidden"></div>
         <div id="profile" class="hidden">
             <div class="profile-card">
                 <img id="avatar" src="" alt="Profile Picture">
                 <h2 id="name"></h2>
-                <p id="bio">I know you are curious about me, but I,m not going to tell you anything</p>
+                <p id="bio"></p>
                 <div class="details">
-                    <p><strong>Location: Accra</strong> <span id="location"></span></p>
-                    <p><strong>Country: Ghana</strong> <span id="country"></span></p>
-                    <p><strong>Age: 20</strong> <span id="age"></span></p>
-                    <p><strong>Education: UCC</strong> <span id="education"></span></p>
-                    <p><strong>Gender: Female</strong> <span id="gender"></span></p>
+                    <p><strong><i class="fas fa-map-marker-alt"></i> Location</strong> <span id="location"></span></p>
+                    <p><strong><i class="fas fa-globe-americas"></i> Country</strong> <span id="country"></span></p>
+                    <p><strong><i class="fas fa-users"></i> Followers</strong> <span id="followers"></span></p>
+                    <p><strong><i class="fas fa-code-branch"></i> Repositories</strong> <span id="repos"></span></p>
+                    <p><strong><i class="fas fa-link"></i> Profile URL</strong> <a id="profile-url" href="#" target="_blank"></a></p>
                 </div>
             </div>
         </div>
